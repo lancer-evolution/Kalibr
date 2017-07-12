@@ -1,15 +1,18 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(numpy_eigen)
 
+include_directories("../../eigen3.0")
 find_package(catkin REQUIRED COMPONENTS cmake_modules python_module)
 include_directories(${catkin_INCLUDE_DIRS})
 find_package(Boost REQUIRED COMPONENTS system)
-find_package(Eigen REQUIRED)
+#find_package(Eigen REQUIRED)
 
 catkin_python_setup()
 
-add_definitions(${EIGEN_DEFINITIONS})
-include_directories(include ${Eigen_INCLUDE_DIRS} ${catkin_INCLUDE_DIRS})
+#add_definitions(${EIGEN_DEFINITIONS})
+include_directories(include ${catkin_INCLUDE_DIRS})
+#include_directories(${Eigen_INCLUDE_DIRS})
+
 include_directories("${PROJECT_SOURCE_DIR}/include/numpy_eigen")
 
 catkin_package(

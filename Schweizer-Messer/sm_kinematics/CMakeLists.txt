@@ -7,7 +7,8 @@ find_package(Boost REQUIRED COMPONENTS system serialization filesystem)
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../cmake)
 find_package(Eigen REQUIRED)
-include_directories(${EIGEN_INCLUDE_DIRS})
+#include_directories(${EIGEN_INCLUDE_DIRS})
+include_directories("../../eigen3.0")
 add_definitions(${EIGEN_DEFINITIONS})
 
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -std=c++0x")
