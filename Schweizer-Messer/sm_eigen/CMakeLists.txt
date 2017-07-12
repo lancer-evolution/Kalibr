@@ -4,12 +4,14 @@ project(sm_eigen)
 find_package(catkin REQUIRED COMPONENTS cmake_modules sm_common sm_random)
 include_directories(${catkin_INCLUDE_DIRS})
 find_package(Boost REQUIRED COMPONENTS system serialization)
-find_package(Eigen REQUIRED)
+#find_package(Eigen REQUIRED)
 
-include_directories(include ${Eigen_INCLUDE_DIRS} ${catkin_INCLUDE_DIRS})
+include_directories(include ${catkin_INCLUDE_DIRS})
+#find_package(Eigen REQUIRED)
+include_directories("../../eigen3.0")
 
 catkin_package(
-  INCLUDE_DIRS include ${Eigen_INCLUDE_DIRS}
+  INCLUDE_DIRS include "../../eigen3.0"
   LIBRARIES ${PROJECT_NAME}
   CATKIN_DEPENDS 
   DEPENDS

@@ -9,7 +9,7 @@ include_directories("../../eigen3.0")
 #find_package(Eigen REQUIRED)
 
 catkin_package(
-    DEPENDS eigen opencv
+    DEPENDS opencv #eigen
     INCLUDE_DIRS include "../../eigen3.0"#${Eigen_INCLUDE_DIRS}
     LIBRARIES ${PROJECT_NAME}
 )
